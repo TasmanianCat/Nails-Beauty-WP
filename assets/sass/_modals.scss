@@ -1,0 +1,124 @@
+@use './variables' as *;
+
+.fade-area {
+  position: fixed;
+  inset: 0;
+  z-index: -1000000;
+
+  will-change: visibility, opacity;
+  visibility: hidden;
+  opacity: 0;
+
+  background-image: linear-gradient(135deg, $bg-clr-light, $bg-clr-light-5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .modal-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - $spacer-inline);
+
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: opacity 0.6s ease-in, transform 0.65s ease;
+    will-change: visibility, transform, opacity;
+  }
+
+  .modal {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: $bg-clr-light-5;
+    width: 600px;
+    padding: 1.5rem;
+    border-radius: $border-radius;
+    border: 1px solid $border-clr-dark;
+    box-shadow: $box-shadow;
+
+    @media (max-width: 360px) {
+      padding: 1rem;
+    }
+
+    &__head {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    &__head-heading {
+    }
+
+    &__head-cancel-button {
+      display: block;
+      height: 1.25rem;
+      width: 1.25rem;
+      cursor: pointer;
+      opacity: 0.35;
+      transition: 0.25s opacity ease-in-out;
+    }
+
+    &__head-cancel-button:hover {
+      opacity: 0.5;
+    }
+
+    &__head-cancel-button-icon {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      padding-block: 1.5rem;
+      border-top: 1px solid $border-clr-dark;
+      border-bottom: 1px solid $border-clr-dark;
+    }
+
+    &__content-link,
+    &__content-link > a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+    }
+
+    &__content-link > a > img {
+      height: 1.85rem;
+      width: 1.85rem;
+    }
+
+    &__content-link > span {
+      font-size: $paragraph-size;
+      color: $text-clr-primary;
+    }
+
+    &__cancel {
+      display: block;
+      width: 100%;
+    }
+
+    &__cancel-button {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+    }
+  }
+}
+
+.fade-area.fade-area-visible {
+  z-index: 1000000;
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-wrapper.modal-visible {
+  z-index: 1000001;
+  visibility: visible;
+  transform: translateY(0);
+  opacity: 1;
+}

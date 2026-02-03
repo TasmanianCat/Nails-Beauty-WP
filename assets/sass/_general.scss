@@ -1,0 +1,30 @@
+@use './variables' as *;
+
+body {
+  font-family: $font-family-primary;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.6;
+  height: 100%;
+  color: $text-clr-primary;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  position: relative;
+}
+
+/* Fix content overlapping by the WP Admin Panel */
+body:has(#wpadminbar) .container {
+  margin-top: 32px;
+  @media (max-width: 782px) {
+    margin-top: 46px;
+  }
+}
+
+// Prevent scroll when the menu is open
+.lock-scroll {
+  overflow: hidden;
+}

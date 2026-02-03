@@ -1,0 +1,2 @@
+<a href="" title="Telegram"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/socials/telegram.svg" alt="Telegram" loading="lazy" decoding="async"><span>На связи с вами в Telegram</span></a>
+<a href="" title="VK"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/socials/vk.svg" alt="VK" loading="lazy" decoding="async"><span>Ждем ваши сообщения в VK</span></a>

@@ -1,0 +1,32 @@
+@use './variables' as *;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+*:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+*:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}

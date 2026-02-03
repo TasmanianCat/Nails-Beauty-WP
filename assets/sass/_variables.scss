@@ -1,0 +1,83 @@
+/* FONTS */
+$font-family-primary: 'Montserrat', sans-serif;
+
+/* COLOR */
+$text-clr-primary: rgb(30, 30, 30);
+$text-clr-secondary: rgb(123, 109, 102);
+$text-clr-tertiary: rgb(159, 104, 55);
+$text-clr-h1: rgb(255, 255, 255);
+$text-clr-h3-feedback: rgb(90, 90, 90);
+$text-clr-tag: rgb(252, 0, 62);
+$text-clr-button: rgb(125, 124, 123);
+$text-clr-button-hover: rgb(98, 98, 98);
+$text-clr-heading-support: rgb(230, 230, 230);
+
+/* BG COLOR */
+$bg-clr-light: rgb(249, 222, 208);
+$bg-clr-light-2: rgb(38, 38, 38);
+$bg-clr-light-3: rgb(255, 229, 216);
+$bg-clr-light-4: rgb(255, 234, 222);
+$bg-clr-light-5: rgb(255, 255, 255);
+$bg-clr-light-6: rgba(243, 243, 243, 0.75);
+$bg-clr-light-7: rgb(250, 248, 247);
+$bg-clr-dark: rgb(71, 57, 43);
+
+$bg-clr-dark-opacity: rgba(0, 0, 0, 0.5);
+$bg-clr-dark-2: rgba(26, 26, 26);
+$bg-clr-dark-3: rgb(71, 71, 71);
+$bg-clr-dark-4: rgb(237, 237, 237);
+$bg-clr-dark-5: rgb(242, 242, 242);
+
+/* PAGE CONTENT WIDTH */
+$max-content-width: 1280px;
+
+/* SPACER */
+$spacer-tiny: clamp(1rem, 2.5vw, 1.5rem);
+$spacer-small: clamp(1rem, 2.5vw, 3rem);
+$spacer-medium: clamp(3rem, 4.5vw, 5rem);
+$spacer-block: clamp(4rem, 7.5vw, 8rem);
+$spacer-block-medium: clamp(3rem, 2.5vw, 5rem);
+$spacer-inline: clamp(1.5rem, 2.5vw, 5rem);
+
+/* SCREEN DEVICE WIDTH */
+$mobile_narrow_width: 480px;
+$mobile_width: 600px;
+$tablet_width: 1200px;
+$desktop_width: 1366px;
+$wide_width: 1920px;
+
+/* FONT SIZE */
+$paragraph-size: clamp(0.9rem, 2.5vw, 1.1rem);
+$h3-h6-font-size: clamp(1.1rem, 5vw, 1.4rem);
+$span-text-footer-size: clamp(0.85rem, 2.5vw, 1rem);
+
+/* PADDING */
+$padding-tiny: 0.5rem;
+$padding-small: 0.75rem;
+$padding-medium: 1rem;
+$padding-large: 1.2rem;
+$padding-huge: 1.5rem;
+
+$padding-block-small-to-medium: clamp(3rem, 7.5vw, 5rem);
+$padding-block-small-to-large: clamp(3rem, 7.5vw, 8rem);
+
+/* BUTTONS */
+$bg-clr-btn: rgb(252, 0, 62);
+$bg-clr-btn-hover: rgb(220, 0, 55);
+
+/* BORDER RADIUS */
+$border-radius: 5px;
+
+/* BORDERS */
+$border-clr-dark: rgba(128, 128, 128, 0.35);
+$border-clr-dark-2: rgba(128, 128, 128, 0.5);
+$border-clr-dark-3: rgb(71, 57, 43);
+
+/* BOX SHADOW */
+$box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+$box-shadow-light: 0 2px 6px rgb(211, 164, 164);
+$box-shadow-light-2: 0 2px 6px rgba(211, 164, 164, 0.5);
+$box-shadow-dark: 0px 0px 10px 8px rgba(0, 0, 0, 0.1);
+$box-shadow-primary: 0 4px 16px rgba(0, 0, 0, 0.08);
+$box-shadow-primary-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+$box-shadow-carousel-btn: 0 2px 10px rgba(0, 0, 0, 0.1);

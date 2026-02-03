@@ -1,0 +1,133 @@
+@use './variables' as *;
+
+.footer {
+  display: block;
+  width: 100%;
+  margin-inline: auto;
+  background-color: $bg-clr-light-5;
+  background-image: url(./../images/footer/cross-scratches.png);
+  border-top: 2px solid rgb(220, 220, 220);
+
+  &__section {
+    display: block;
+    margin-inline: auto;
+    width: calc(100% - $spacer-inline);
+    max-width: $max-content-width;
+    padding-block: $padding-block-small-to-medium;
+  }
+
+  &__section-content {
+    display: flex;
+    gap: 1.5rem;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  &__section-content > * {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 307px;
+  }
+
+  &__section-content-details {
+    p > a {
+      text-decoration: none;
+    }
+  }
+
+  .wp-block-heading {
+    color: $text-clr-secondary;
+  }
+
+  .widget_block p a {
+    text-decoration: none;
+  }
+
+  .wp-block-loginout a {
+    text-decoration: none;
+  }
+
+  &__section-content-details-socials {
+    display: inline-flex;
+    gap: 0.75rem;
+    margin-top: 0.25rem;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 0.75rem;
+      text-decoration: none;
+
+      img {
+        display: block;
+        height: 1.85rem;
+        width: 1.85rem;
+      }
+    }
+  }
+
+  &__section-content-details-wrapper li {
+    list-style: none;
+    margin-left: 0;
+  }
+
+  &__section-content-details-admin .widget_block .wp-block-loginout a {
+    text-decoration: none;
+  }
+
+  &__ligal-info-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-inline: auto;
+    min-height: 48px;
+    background-color: $bg-clr-dark-2;
+    border-top: 2px solid rgb(220, 220, 220);
+  }
+
+  &__ligal-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 0.75rem;
+    width: calc(100% - $spacer-inline);
+    max-width: 1920px;
+
+    span {
+      text-align: center;
+      font-size: $span-text-footer-size;
+      line-height: 1.5;
+      color: $text-clr-tertiary;
+    }
+  }
+
+  @media (max-width: 992px) {
+    &__section-content > * {
+      flex-basis: 260px;
+    }
+  }
+
+  @media (max-width: $mobile_width) {
+    &__section-content > * {
+      flex-basis: 100%;
+    }
+
+    &__section-content > ul > li > h3,
+    &__section-content > ul > li > address,
+    &__section-content > ul > li > p {
+      text-align: center;
+    }
+
+    &__section-content-details-socials {
+      justify-content: center;
+      width: 100%;
+    }
+
+    &__section-content-details-wrapper > li > div > a {
+      display: block;
+      text-align: center;
+    }
+  }
+}
