@@ -17,6 +17,10 @@ Template Name: Шаблон "Главная страница (Front Page)."
     <div class="main__content-wrapper main__content-wrapper--bg-color" id="services">
       <?php get_template_part('pages/front-page/sections/services-section'); ?>
     </div>
+    <!-- Price section -->
+    <div class="main__content-wrapper" id="price">
+      <?php get_template_part('pages/front-page/sections/price-section'); ?>
+    </div>
     <!-- Videos block -->
     <div class="main__content-wrapper main__content-wrapper--bg-image-dark">
       <?php get_template_part('pages/front-page/sections/videos'); ?>
