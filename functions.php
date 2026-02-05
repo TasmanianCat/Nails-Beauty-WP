@@ -1,6 +1,33 @@
 <?php
 defined('ABSPATH') || exit;
 
+// Stop loading files that are WordPress core (Gutenberg)
+add_action('wp_enqueue_scripts', function () {
+  wp_dequeue_style('wp-block-library');
+  wp_dequeue_style('wp-block-library-theme');
+
+  wp_dequeue_script('wp-blocks');
+  wp_dequeue_script('wp-i18n');
+  wp_dequeue_script('wp-hooks');
+}, 100);
+
+
+// Disable CF7 assets everywhere
+add_action('wp_enqueue_scripts', function () {
+  wp_dequeue_style('contact-form-7');
+  wp_dequeue_script('contact-form-7');
+}, 20);
+
+// Enable only on contact page
+add_action('wp_enqueue_scripts', function () {
+  if (is_page('contact')) {
+    if (function_exists('wpcf7_enqueue_scripts')) {
+      wpcf7_enqueue_scripts();
+      wpcf7_enqueue_styles();
+    }
+  }
+}, 21);
+
 // Dequeue the Gutenberg Block Library CSS.
 function dequeue_gutenberg_block_library_css() {
   wp_dequeue_style( 'wp-block-library' );
