@@ -90,7 +90,7 @@
   align-items: center;
   justify-content: center;
 }
-/// //////////////////////////////////////////////////////////////////
+
 .main__content-form-fields-item p .wpcf7-submit {
   display: inline-flex;
   align-items: center;
@@ -161,7 +161,7 @@
 .wpcf7-spinner {
   margin: 0 !important;
   padding: 0 !important;
-  position: absolute;
+  position: absolute !important;
   top: 100%;
   left: 50%;
   transform: translate(-50%, 10px);
