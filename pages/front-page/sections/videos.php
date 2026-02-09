@@ -30,8 +30,8 @@
       disableRemotePlayback
       controlslist="nodownload noplaybackrate noremoteplayback nofullscreen" aria-label="Video 2: Beauty salon services"
     >
-      <source data-src="<?php echo get_template_directory_uri(); ?>/assets/videos/video-2.webm" type="video/webm">
-      <source data-src="<?php echo get_template_directory_uri(); ?>/assets/videos/video-2.mp4" type="video/mp4">
+      <source data-src="<?php echo get_template_directory_uri(); ?>/assets/videos/video-4.webm" type="video/webm">
+      <source data-src="<?php echo get_template_directory_uri(); ?>/assets/videos/video-4.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
@@ -48,8 +48,8 @@
       disableRemotePlayback
       controlslist="nodownload noplaybackrate noremoteplayback nofullscreen" aria-label="Video 3: Beauty salon services"
     >
-      <source data-src="<?php echo get_template_directory_uri(); ?>/assets/videos/video-3.webm" type="video/webm">
-      <source data-src="<?php echo get_template_directory_uri(); ?>/assets/videos/video-3.mp4" type="video/mp4">
+      <source data-src="<?php echo get_template_directory_uri(); ?>/assets/videos/video-5.webm" type="video/webm">
+      <source data-src="<?php echo get_template_directory_uri(); ?>/assets/videos/video-5.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
