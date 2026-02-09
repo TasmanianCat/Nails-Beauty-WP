@@ -1,41 +1,49 @@
 import { closeAllSubmenus } from './handleSubMenu.js';
+import { closeMobileMenu } from './handleMobileMenu.js';
+
+let menuInitialized = false;
 
 export function handleMenu() {
+  if (menuInitialized) return;
+
   const navButton = document.getElementById('navButton');
-
-  // Select the nav container that starts with 'menu-top-nav-bar-'
-  const navBarContainer = document.querySelector(
-    '[class^="menu-top-nav-bar-"]'
-  );
-
-  // Select the nav bar itself (if it has a language-specific ID, do similar)
+  const navBarContainer = document.querySelector('.menu-container');
   const navBar = document.getElementById('menuTopNavBar');
 
+  // ⛔ Exit quietly if menu does not exist
   if (!navButton || !navBarContainer || !navBar) {
-    console.warn('handleMenu: One or more elements not found.');
     return;
   }
 
+  menuInitialized = true;
+
+  // 🍔 Burger toggle
   navButton.addEventListener('click', () => {
     navBarContainer.classList.toggle('show-nav-bar-container');
     navBar.classList.toggle('show-nav-bar-links');
     document.body.classList.toggle('lock-scroll');
 
-    const screenWidth = window.innerWidth;
+    closeAllSubmenus();
 
-    if (navBarContainer.classList.contains('show-nav-bar-container')) {
-      closeAllSubmenus();
-    }
-
-    if (screenWidth <= 1200) {
+    if (window.innerWidth <= 1200) {
       navBarContainerHeight();
+    }
+  });
+
+  // 🔗 Close menu on link / anchor click (mobile only)
+  navBarContainer.addEventListener('click', (e) => {
+    const link = e.target.closest('a');
+    if (!link) return;
+
+    if (window.innerWidth <= 1200) {
+      closeMobileMenu();
     }
   });
 }
 
 export function navBarContainerHeight() {
   const navBarContainer = document.querySelector(
-    '[class^="menu-top-nav-bar-"]'
+    '[class^="menu-top-nav-bar-"]',
   );
   if (!navBarContainer) return;
 
@@ -77,7 +85,7 @@ window.addEventListener(
 
       // Also ensure menu is closed
       const navBarContainer = document.querySelector(
-        '[class^="menu-top-nav-bar-"]'
+        '[class^="menu-top-nav-bar-"]',
       );
       const navBar = document.getElementById('menuTopNavBar');
       document.body.classList.remove('lock-scroll');
@@ -87,5 +95,5 @@ window.addEventListener(
         navBar.classList.remove('show-nav-bar-links');
       }
     }
-  }, 150)
+  }, 150),
 );

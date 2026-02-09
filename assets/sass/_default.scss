@@ -25,8 +25,16 @@ html {
   padding: 0 !important;
 }
 
+/* Apply scroll-margin to your anchor target elements */
+:target /* Add other anchor IDs here */ {
+  scroll-margin-top: 64px;
+}
+
+/* Smooth scrolling with accessibility and browser support checks */
 @media (prefers-reduced-motion: no-preference) {
-  html {
-    scroll-behavior: smooth;
+  @supports (scroll-behavior: smooth) {
+    html {
+      scroll-behavior: smooth;
+    }
   }
 }
